@@ -27,9 +27,9 @@ class ActorsController < ApplicationController
 
   def update
     @actor=Actor.find(params[:id])
-    @actor.name=params[:name]
-    @actor.bio=params[:bio]
-    @actor.dob=params[:dob]
+    @actor.name=params[:the_name]
+    @actor.bio=params[:the_bio]
+    @actor.dob=params[:the_dob]
     @actor.image_url=params[:image_url]
     @actor.save
     redirect_to("/actor/#{params[:id]}")
